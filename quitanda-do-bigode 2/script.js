@@ -46,44 +46,39 @@ function comprarMaca() {
     }
 }
 
-
+function calcularPrecoManga(preco, marca){
+    const kgManga = Number(prompt(`Quantos Kg de manga voce deseja comprar?`))
+   const valorCompra = kgManga * preco
+   alert(`Voce comprou ${kgManga}Kg de manga ${marca} e saiu no valor de ${valorCompra.toFixed(2)}`)
+}
 function comprarManga() {
    
-
-    var compra = 0
-    alert("O KG da manga Palmer é R$5,49 o KG da manga Rosa R$10,00 e o KG da manga Tommy R$2,99")
-
-    var opcaoManga = Number(prompt("Qual tipo de  Manga deseja comprar?    [1] Manga Palmer, [2] Manga Rosa, [3] Manga Tommy"))
+    var opcaoManga = Number(prompt("Qual tipo de  Manga  deseja comprar?    [1] Manga Palmer, [2] Manga Rosa, [3] Manga Tommy"))
+   
+    
 
 
-
-    switch (opcaoManga) {
+ switch (opcaoManga) {
 
         case 1:
-            alert("Manga Palmer")
-            var kgManga = Number(prompt("Quantos quilos voce deseja comprar"))
-            compra = kgManga * 5.49
-            alert(`Voce comprou ${kgManga} Kg de manga e saiu por R$${compra.toFixed(2)}`)
-            break;
+          calcularPrecoManga(5.49, "Palmer")
+          break;
         case 2:
-            alert("Manga Rosa")
-            var kgManga = Number(prompt("Quantos quilos voce deseja comprar"))
-            compra = kgManga * 10.00
-            alert(`Voce comprou ${kgManga} Kg de manga e saiu por R$${compra.toFixed(2)}`)
-            break;
+          calcularPrecoManga(10, "Rosa")
+          break;
         case 3:
-            alert("Manga Tommy")
-            var kgManga = Number(prompt("Quantos quilos voce deseja comprar"))
-            compra = kgManga * 2.99
-            alert(`Voce comprou ${kgManga} Kg de manga e saiu por R$${compra.toFixed(2)}`)
-            break;
-        default:
+          calcularPrecoManga(2.99, "Tommy")
+          break;
+       default:
             alert("NAO EXISTE ESTA OPCAO")
     }
  
  
 }
 
+function calcularLaranja(){
+    
+}
 function comprarLaranja(){
 var resultadoLaranja = 0
 alert("[1] Laranja Pera R$ 5,99 acima de 2kg valor Promocional R$ 5,00, [2] Laranja Lima R$ 3,00 acima de 3 kg valor Promocional R$ 2,00, [3] Laranja Bahia R$ 4,00 acima de 4Kg valor Promocional R$ 3,50")
